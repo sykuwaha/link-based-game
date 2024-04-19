@@ -1,0 +1,340 @@
+{
+    "Title": "Escape Room",
+    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
+    "InitialLocation": "Bedroom",
+    "Locations": {
+        "Bedroom": {
+            "Body": "You're in your bedroom. Something feels off.",
+            "Choices": [
+                {
+                    "Text": "leave the room",
+                    "Target": "Hallway"
+                },
+                {
+                    "Text": "take a look around",
+                    "Target": "Bedroom2"
+                }
+            ]
+        },
+        "Bedroom2": {
+            "Body": "You take a look around but can't find anything strange. ",
+            "Choices": [
+                {
+                    "Text": "leave the room",
+                    "Target": "Hallway"
+                }
+            ]
+        },
+        "Hallway": {
+            "Body": "You enter the hallway. The house is quiet.",
+            "Choices": [
+                {
+                    "Text": "go back to the Bedroom",
+                    "Target": "Bedroom"
+                },
+                {
+                    "Text": "continue left to the living room",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "continue right to the master bedroom",
+                    "Target": "Master Bedroom"
+                }
+            ]
+        },
+        "Master Bedroom": {
+            "Body": "You enter the Master Bedroom.",
+            "Choices": [
+                {
+                    "Text": "go back into the hallway",
+                    "Target": "Hallway"
+                },
+                {
+                    "Text": "turn the lights off",
+                    "Target": "Master Bedroom with lights off"
+                },
+                {
+                    "Text": "take a look at the bookshelf",
+                    "Target": "Bookshelf Check with lights on"
+                },
+                {
+                    "Text": "check out the mirror",
+                    "Target": "Mirror Check with lights on"
+                }
+            ]
+        },
+        "Master Bedroom with lights off": {
+            "Body": "The lights in the room go out.",
+            "Choices": [
+                {
+                    "Text": "go back into the hallway",
+                    "Target": "Hallway"
+                },
+                {
+                    "Text": "turn the lights on",
+                    "Target": "Master Bedroom with lights on"
+                },
+                {
+                    "Text": "take a look at the bookshelf",
+                    "Target": "Bookshelf Check with lights off"
+                },
+                {
+                    "Text": "check out the mirror",
+                    "Target": "Mirror Check with lights off"
+                }
+            ]
+        },
+        "Master Bedroom with lights on": {
+            "Body": "The lights in the room come back on.",
+            "Choices": [
+                {
+                    "Text": "go back into the hallway",
+                    "Target": "Hallway"
+                },
+                {
+                    "Text": "turn the lights off",
+                    "Target": "Master Bedroom with lights off"
+                },
+                {
+                    "Text": "take a look at the bookshelf",
+                    "Target": "Bookshelf Check with lights on"
+                },
+                {
+                    "Text": "check out the mirror",
+                    "Target": "Mirror Check with lights on"
+                }
+            ]
+        },
+        "Mirror Check with lights off": {
+            "Body": "It's dark so you cannot see the mirror.",
+            "Choices": [
+                {
+                    "Text": "go back into the hallway",
+                    "Target": "Hallway"
+                },
+                {
+                    "Text": "turn the lights on",
+                    "Target": "Mirror Check with lights on"
+                },
+                {
+                    "Text": "take a look at the bookshelf",
+                    "Target": "Bookshelf Check with lights off"
+                }
+                
+            ]
+        },
+        "Mirror Check with lights on": {
+            "Body": "Your reflection looks fatigued...",
+            "Choices": [
+                {
+                    "Text": "go back into the hallway",
+                    "Target": "Hallway"
+                },
+                {
+                    "Text": "turn the lights off",
+                    "Target": "Mirror Check with lights off"
+                },
+                {
+                    "Text": "take a look at the bookshelf",
+                    "Target": "Bookshelf Check with lights on"
+                }
+            ]
+        },
+        "Bookshelf Check with lights on": {
+            "Body": "Just a normal looking bookcase...",
+            "Choices": [
+                {
+                    "Text": "go back into the hallway",
+                    "Target": "Hallway"
+                },
+                {
+                    "Text": "turn the lights off",
+                    "Target": "Bookshelf Check with lights off"
+                }
+            ]
+        },
+        "Bookshelf Check with lights off": {
+            "Body": "A strange light pokes through a hole in the bookcase...",
+            "Choices": [
+                {
+                    "Text": "go back into the hallway",
+                    "Target": "Hallway"
+                },
+                {
+                    "Text": "turn the lights on",
+                    "Target": "Bookshelf Check with Lights on"
+                },
+                {
+                    "Text": "take a closer look",
+                    "Target": "secret entrance"
+                }
+            ]
+        },
+        "secret entrance": {
+            "Body": "Inside the small hole you find a keyhole. It looks like a hidden room",
+            "Choices": [
+                {
+                    "Text": "go back into the hallway",
+                    "Target": "Hallway"
+                },
+                {
+                    "Text": "try to enter the secret room.",
+                    "Target": "Secret Room with Key,Secret Room without Key"
+                }
+                
+            ]
+        },
+        "Secret Room with Key": {
+            "Body": "The bookshelf swings open to reveal the hidden room",
+            "Choices": [
+                {
+                    "Text": "Look closer",
+                    "Target": "Writing on the wall"
+                }
+            ]
+        },
+        "Secret Room without Key": {
+            "Body": "You don't have the right key to enter this room. Maybe try looking in another part of the house...",
+            "Choices": [
+                {
+                    "Text": "go back into the hallway",
+                    "Target": "Hallway"
+                }
+            ]
+        },
+        "Writing on the wall": {
+            "Body": "You look up to see the words, 'TAKE OFF THE HEADSET' in blood red letters...",
+            "Choices": [
+                {
+                    "Text": "take it off",
+                    "Target": "END"
+                }
+            ]
+        },
+        "END": {
+            "Body": "You realize you are back in your bedroom. The real world comes back into focus as you realize you were just playing with your VR headset."
+        },
+
+        "Living Room": {
+            "Body": "You enter the living room. Looks like nobody's home.",
+            "Choices": [
+                {
+                    "Text": "go back into the hallway",
+                    "Target": "Hallway"
+                },
+                {
+                    "Text": "walk into the kitchen",
+                    "Target": "Kitchen"
+                },
+                {
+                    "Text": "check out the sliding door",
+                    "Target": "Outdoor check"
+                }
+            ]
+        },
+        "Outdoor check": {
+            "Body": "The sliding door leads to the outside. ",
+            "Choices": [
+                {
+                    "Text": "go back into the living room",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "walk into the kitchen",
+                    "Target": "Kitchen"
+                },
+                {
+                    "Text": "go outside",
+                    "Target": "Outside"
+                }
+            ]
+        },
+        "Outside": {
+            "Body": "You step outside. The fresh air is nice but it feels like you should go back in the house... ",
+            "Choices": [
+                {
+                    "Text": "go back inside",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "walk down the street",
+                    "Target": "street"
+                }
+            ]
+        },
+        "street": {
+            "Body": "As you begin walking away from the house you hear footsteps behind you...",
+            "Choices": [
+                {
+                    "Text": "turn around",
+                    "Target": "dead"
+                }
+            ]
+        },
+        "dead": {
+            "Body": "A blade flashes as your head detatches from your body... you are DEAD.",
+            "Choices": [
+                {
+                    "Text": "RESTART",
+                    "Target": "Bedroom"
+                }
+            ]
+        },
+        "Kitchen": {
+            "Body": "You enter the kitchen. Something smells...",
+            "Choices": [
+                {
+                    "Text": "go back to the living room",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "open the fridge",
+                    "Target": "Scare"
+                },
+                {
+                    "Text": "check the sink",
+                    "Target": "SINK KEY"
+                }
+            ]
+        },
+        "SINK KEY": {
+            "Body": "You check the sink to find a bronze key...",
+            "Choices": [
+                {
+                    "Text": "go back to the living room",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "open the fridge",
+                    "Target": "Scare"
+                },
+                {
+                    "Text": "pick up the key",
+                    "Target": "Kitchen with key"
+                }
+            ]
+        },
+        "Kitchen with key": {
+            "Body": "You pocket the key. Maybe it will be useful later.",
+            "Choices": [
+                {
+                    "Text": "go back to the living room",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "open the fridge",
+                    "Target": "Scare"
+                }
+            ]
+        },
+        "Scare": {
+            "Body": "Your own severed head stares back at you",
+            "Choices": [
+                {
+                    "Text": "RESTART",
+                    "Target": "Bedroom"
+                }
+            ]
+        }
+    }
+}
